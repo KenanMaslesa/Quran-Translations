@@ -1460,6 +1460,16 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kmaslesa/quran_translation-bosnian_korkut@^1.0.0":
+  "integrity" "sha512-ImC1u58v/Me7awuRe6yAXjZt081zRbUwgMvvxaOMBclMBAf7HQtOXJ57vals5o19TIa7Yme5wgP+/sIY7kTX+Q=="
+  "resolved" "https://registry.npmjs.org/@kmaslesa/quran_translation-bosnian_korkut/-/quran_translation-bosnian_korkut-1.0.0.tgz"
+  "version" "1.0.0"
+
+"@kmaslesa/quran-metadata@^1.0.18":
+  "integrity" "sha512-DXqq+4Me7iwUYhfAaKlcbUZ4ioSmZBqjNoKOTe1cHrP3RWHdSIp60ZLbNH7zQqm0NlMzcKUDvisk8taFHhzeXw=="
+  "resolved" "https://registry.npmjs.org/@kmaslesa/quran-metadata/-/quran-metadata-1.0.18.tgz"
+  "version" "1.0.18"
+
 "@nodelib/fs.scandir@2.1.5":
   "integrity" "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g=="
   "resolved" "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"

@@ -17,7 +17,7 @@ const SuraScreen: React.FC<{ route: any; navigation: any }> = (props) => {
     const suraInfo = quranMetaData.getSuraByIndex(suraIndex);
 
     props.navigation.setOptions({
-      title: `${suraInfo?.name.english} - ${suraInfo?.name.englishTranscription}`,
+      title: `${suraInfo?.name.englishTranscription}`,
     });
   }, []);
 

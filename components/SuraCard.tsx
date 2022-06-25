@@ -36,12 +36,13 @@ const styles = StyleSheet.create({
   },
   suraCard: {
     padding: 10,
-    borderColor: "lightgray",
+    borderColor: "gray",
     borderBottomWidth: 0.2,
     width: "95%",
     borderRadius: 5,
   },
   suraText: {
     color: "white",
+    fontSize: 16
   },
 });

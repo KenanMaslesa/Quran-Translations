@@ -12,6 +12,7 @@
   "dependencies": {
     "@kmaslesa/quran_translation-bosnian_korkut": "^1.0.0",
     "@kmaslesa/quran-metadata": "^1.0.18",
+    "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/stack": "^6.2.1",
     "expo": "~45.0.0",
@@ -19,7 +20,9 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-native": "0.68.2",
-    "react-native-web": "0.17.7"
+    "react-native-vector-icons": "^9.2.0",
+    "react-native-web": "0.17.7",
+    "react-navigation": "^4.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

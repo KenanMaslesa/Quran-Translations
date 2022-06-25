@@ -18,23 +18,25 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     alignItems: "center",
-    borderColor: "lightgray",
+    borderColor: "gray",
     borderBottomWidth: 0.2,
     paddingTop: 15,
     paddingBottom: 15,
   },
   arabicText: {
     color: "white",
-    fontSize: 18,
+    fontSize: 22,
     marginBottom: 10,
     textAlign: "center",
   },
   translationText: {
     color: "white",
     textAlign: "center",
+    fontSize: 16
   },
   ayaNumber: {
     color: "white",
     marginBottom: 10,
+    fontSize: 16
   },
 });

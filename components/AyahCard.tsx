@@ -8,17 +8,17 @@ const AyahCard: React.FC<{ ayah: Ayah }> = (props) => {
   const [showBosnianKorkutTranslation, setShowBosnianKorkutTranslation] =
     useState(true);
   const [showBosnianMehanovicTranslation, setShowBosnianMehanovicTranslation] =
-    useState(true);
+    useState(false);
   const [showEnglishSaheehTranslation, setShowEnglishSaheehTranslation] =
-    useState(true);
+    useState(false);
   const [
     showEnglishHilaliKhanTranslation,
     setShowEnglishHilaliKhanTranslation,
-  ] = useState(true);
-  const [showGermanTranslation, setShowGermanTranslation] = useState(true);
-  const [showSpanishTranslation, setShowSpanishTranslation] = useState(true);
-  const [showFrenchTranslation, setShowFrenchTranslation] = useState(true);
-  const [showTurkishTranslation, setShowTurkishTranslation] = useState(true);
+  ] = useState(false);
+  const [showGermanTranslation, setShowGermanTranslation] = useState(false);
+  const [showSpanishTranslation, setShowSpanishTranslation] = useState(false);
+  const [showFrenchTranslation, setShowFrenchTranslation] = useState(false);
+  const [showTurkishTranslation, setShowTurkishTranslation] = useState(false);
 
   const [fontsLoaded] = useFonts({
     quran: require("../assets/fonts/me_quran.ttf"),
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   arabicText: {
     color: "white",
     fontFamily: "quran",
-    fontSize: 22,
+    fontSize: 18,
     marginBottom: 10,
     textAlign: "center",
   },

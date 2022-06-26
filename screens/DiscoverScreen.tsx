@@ -8,6 +8,7 @@ import {
   View,
 } from "react-native";
 import AyahCard from "../components/AyahCard";
+import { COLORS } from "../shared/colors";
 import { Ayah } from "../shared/models";
 
 const quranTranslation = require("@kmaslesa/quran-translations");
@@ -22,31 +23,36 @@ const DiscoverScreen = () => {
   }, [searchTerm]);
 
   return (
-    <ImageBackground
-      source={require("../assets/background.jpg")}
-      style={styles.backgroundImage}
-    >
-      <View>
-        <TextInput
-          style={styles.input}
-          placeholder="Search Qur'an"
-          placeholderTextColor={"white"}
-          value={searchTerm}
-          onChangeText={setSearchTerm}
-        />
-        <Text style={styles.text}>Found: {ayahs.length}</Text>
-        <FlatList
-          data={ayahs}
-          keyExtractor={(item) => `${item.index}`}
-          initialNumToRender={7}
-          renderItem={({ item }) => <AyahCard ayah={item} />}
-        />
-      </View>
-    </ImageBackground>
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("../assets/background.jpg")}
+        style={styles.backgroundImage}
+      >
+        <View>
+          <TextInput
+            style={styles.input}
+            placeholder="Search Qur'an"
+            placeholderTextColor={"white"}
+            value={searchTerm}
+            onChangeText={setSearchTerm}
+          />
+          <Text style={styles.text}>Found: {ayahs.length}</Text>
+          <FlatList
+            data={ayahs}
+            keyExtractor={(item) => `${item.index}`}
+            initialNumToRender={7}
+            renderItem={({ item }) => <AyahCard ayah={item} />}
+          />
+        </View>
+      </ImageBackground>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: COLORS.mainColor,
+  },
   backgroundImage: {
     minHeight: "100%",
   },

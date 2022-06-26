@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import AyahCard from "../components/AyahCard";
-import { Ayah } from "../models";
+import { Ayah } from "../shared/models";
 
 const quranTranslation = require("@kmaslesa/quran-translations");
 

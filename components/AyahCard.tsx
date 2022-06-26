@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Button } from "react-native";
-import { Ayah } from "../models";
+import { Ayah } from "../shared/models";
 import { useFonts } from "expo-font";
 import { useState } from "react";
 import TranslationCard from "./TranslationCard";

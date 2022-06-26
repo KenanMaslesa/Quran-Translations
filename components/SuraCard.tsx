@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { Sura } from "../models";
+import { Sura } from "../shared/models";
 
 const SuraCard: React.FC<{ sura: Sura }> = (props) => {
   const navigation = useNavigation();

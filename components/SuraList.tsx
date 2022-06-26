@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FlatList, Text, View } from "react-native";
-import { Sura } from "../models";
+import { Sura } from "../shared/models";
 import Loader from "./Loader";
 import SuraCard from "./SuraCard";
 

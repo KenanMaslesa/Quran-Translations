@@ -4,7 +4,8 @@ import { ImageBackground } from "react-native";
 
 import AyahCard from "../components/AyahCard";
 import Loader from "../components/Loader";
-import { Ayah } from "../models";
+import { Colors } from "../shared/colors";
+import { Ayah } from "../shared/models";
 
 const quranTranslation = require("@kmaslesa/quran-translations");
 const quranMetaData = require("@kmaslesa/quran-metadata");
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: "100%",
+    backgroundColor: Colors.mainColor
   },
   ayahList: {
     width: "100%",

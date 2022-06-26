@@ -18,9 +18,17 @@ const DiscoverScreen = () => {
   const [ayahs, setAyahs] = useState<Ayah[]>([]);
 
   useEffect(() => {
-    const response = quranTranslation.searchAyahs(searchTerm);
-    setAyahs(response);
+    searchAyahs();
   }, [searchTerm]);
+
+  const searchAyahs = () => {
+    if(searchTerm === '') {
+      setAyahs([]);
+    }
+    else {
+      setAyahs(quranTranslation.searchAyahs(searchTerm));
+    }
+  }
 
   return (
     <View style={styles.container}>
@@ -36,7 +44,8 @@ const DiscoverScreen = () => {
             value={searchTerm}
             onChangeText={setSearchTerm}
           />
-          <Text style={styles.text}>Found: {ayahs.length}</Text>
+          {ayahs.length !== 0 && <Text style={styles.text}>Found: {ayahs.length}</Text>}
+          
           <FlatList
             data={ayahs}
             keyExtractor={(item) => `${item.index}`}

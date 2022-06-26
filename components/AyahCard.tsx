@@ -1,7 +1,19 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Ayah } from "../models";
+import { useFonts } from 'expo-font';
 
 const AyahCard: React.FC<{ ayah: Ayah }> = (props) => {
+
+  const [fontsLoaded] = useFonts({
+    'quran': require('../assets/fonts/me_quran.ttf'),
+  })
+
+  if(!fontsLoaded) {
+    return (
+      <Text>Loading...</Text>
+    )
+  }
+
   return (
     <View style={styles.ayahCard}>
       <Text style={styles.ayaNumber}>{props.ayah.ayaNumber}.</Text>
@@ -32,6 +44,7 @@ const styles = StyleSheet.create({
   },
   arabicText: {
     color: "white",
+    fontFamily: 'quran',
     fontSize: 22,
     marginBottom: 10,
     textAlign: "center",

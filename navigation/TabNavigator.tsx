@@ -26,7 +26,7 @@ const BottomTabNavigator = () => {
           }
         }
       />
-      <Tab.Screen name="FavoriteScreen" component={FavoriteStackNavigator} />
+      {/* <Tab.Screen name="FavoriteScreen" component={FavoriteStackNavigator} /> */}
 
       <Tab.Screen name="Search" component={DiscoverStackNavigator} />
     </Tab.Navigator>

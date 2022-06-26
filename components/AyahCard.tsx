@@ -1,10 +1,14 @@
-import { View, Text, StyleSheet, Button } from "react-native";
-import { Ayah } from "../shared/models";
+import { View, Text, StyleSheet, Button, Pressable } from "react-native";
 import { useFonts } from "expo-font";
 import { useState } from "react";
+import { Audio } from "expo-av";
+
 import TranslationCard from "./TranslationCard";
+import { Ayah } from "../shared/models";
 
 const AyahCard: React.FC<{ ayah: Ayah }> = (props) => {
+  const [playingAyah, setPlayingAyah] = useState<number>();
+
   const [showBosnianKorkutTranslation, setShowBosnianKorkutTranslation] =
     useState(true);
   const [showBosnianMehanovicTranslation, setShowBosnianMehanovicTranslation] =
@@ -24,12 +28,29 @@ const AyahCard: React.FC<{ ayah: Ayah }> = (props) => {
     quran: require("../assets/fonts/me_quran.ttf"),
   });
 
+  async function playSound(ayahIndex: number) {
+    const urlTemplate = `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${ayahIndex}.mp3`;
+    const { sound } = await Audio.Sound.createAsync({ uri: urlTemplate });
+    await sound.playAsync();
+    const interval = setInterval(() => {
+      sound.getStatusAsync().then((status) => {
+        if(!status.isPlaying) {
+            clearInterval(interval);
+            // ayahIndex = ayahIndex + 1;
+            // setPlayingAyah(ayahIndex);
+            // playSound(ayahIndex);
+        }
+      })
+    }, 1000)
+
+  }
+
   if (!fontsLoaded) {
     return <Text></Text>;
   }
 
   return (
-    <View style={styles.ayahCard}>
+    <Pressable style={styles.ayahCard} onPress={() => playSound(props.ayah.index)}>
       <Text style={styles.ayaNumber}>{props.ayah.ayaNumber}.</Text>
       <Text style={styles.arabicText}>{props.ayah.aya}</Text>
 
@@ -81,7 +102,7 @@ const AyahCard: React.FC<{ ayah: Ayah }> = (props) => {
           title="Turkish:"
         />
       )}
-    </View>
+    </Pressable>
   );
 };
 

@@ -5,7 +5,7 @@ import { ImageBackground } from "react-native";
 import AyahCard from "../components/AyahCard";
 import { Ayah } from "../models";
 
-const quranTranslation = require("@kmaslesa/quran_translation-bosnian_korkut");
+const quranTranslation = require("@kmaslesa/quran-translations");
 const quranMetaData = require("@kmaslesa/quran-metadata");
 
 const SuraScreen: React.FC<{ route: any; navigation: any }> = (props) => {

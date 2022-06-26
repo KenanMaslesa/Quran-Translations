@@ -26,13 +26,24 @@ export interface Sura {
   }
 
   export interface Ayah {
+    aya: string;
+    ayaNumber: number;
+    page: number;
     index: number;
     sura: number;
-    ayaNumber: number;
-    aya: string;
     juz: number;
     hizb: number;
-    page: number;
-    translation: string;
+    translation: Translation;
   }
+  export interface Translation {
+    bosnianKorkut: string;
+    bosnianMehanovic: string;
+    englishSaheeh: string;
+    englishHilaliKhan: string;
+    germanBubenheim: string;
+    turkishRowwadTranslationCentar: string;
+    frenchMontada: string;
+    spanishMontadaEu: string;
+  }
+  
   

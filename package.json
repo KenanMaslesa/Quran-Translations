@@ -10,8 +10,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@kmaslesa/quran_translation-bosnian_korkut": "^1.0.0",
     "@kmaslesa/quran-metadata": "^1.0.18",
+    "@kmaslesa/quran-translations": "^1.0.1",
     "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/stack": "^6.2.1",

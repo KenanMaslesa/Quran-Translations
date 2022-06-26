@@ -6,7 +6,14 @@ const AyahCard: React.FC<{ ayah: Ayah }> = (props) => {
     <View style={styles.ayahCard}>
       <Text style={styles.ayaNumber}>{props.ayah.ayaNumber}.</Text>
       <Text style={styles.arabicText}>{props.ayah.aya}</Text>
-      <Text style={styles.translationText}>{props.ayah.translation}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.bosnianKorkut}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.bosnianMehanovic}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.englishSaheeh}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.englishHilaliKhan}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.germanBubenheim}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.spanishMontadaEu}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.frenchMontada}</Text>
+      <Text style={styles.translationText}>{props.ayah.translation.turkishRowwadTranslationCentar}</Text>
     </View>
   );
 };

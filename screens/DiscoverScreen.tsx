@@ -22,7 +22,7 @@ const DiscoverScreen = () => {
   }, [searchTerm]);
 
   return (
-    <ImageBackground source={require("../assets/background.jpg")}>
+    <ImageBackground source={require("../assets/background.jpg")} style={styles.backgroundImage}>
       <View>
         <TextInput
           style={styles.input}
@@ -44,6 +44,9 @@ const DiscoverScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    minHeight: '100%'
+  },
   input: {
     height: 40,
     margin: 12,

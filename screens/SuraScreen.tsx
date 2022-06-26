@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { FlatList, StyleSheet, View } from "react-native";
+import { ActivityIndicator, FlatList, StyleSheet, View } from "react-native";
 import { ImageBackground } from "react-native";
 
 import AyahCard from "../components/AyahCard";
+import Loader from "../components/Loader";
 import { Ayah } from "../models";
 
 const quranTranslation = require("@kmaslesa/quran-translations");
@@ -23,21 +24,25 @@ const SuraScreen: React.FC<{ route: any; navigation: any }> = (props) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require("../assets/background.jpg")}>
-        <FlatList
+      <ImageBackground source={require("../assets/background.jpg")} style={styles.backgroundImage}>
+        {ayahs.length != 0? <FlatList
           style={styles.ayahList}
           refreshing={true}
           data={ayahs}
           keyExtractor={(item) => `${item.index}`}
           initialNumToRender={7}
           renderItem={({ item }) => <AyahCard ayah={item} />}
-        />
+        />: <Loader/>}
+        
       </ImageBackground>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  backgroundImage: {
+    minHeight: '100%'
+  },
   container: {
     flex: 1,
     width: "100%",

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FlatList, Text, View } from "react-native";
 import { Sura } from "../models";
+import Loader from "./Loader";
 import SuraCard from "./SuraCard";
 
 const quranMetaData = require("@kmaslesa/quran-metadata");
@@ -15,11 +16,15 @@ const SuraList = () => {
 
   return (
     <View>
-      <FlatList
-        data={suraList}
-        keyExtractor={(item) => `${item.index}`}
-        renderItem={({ item }) => <SuraCard sura={item} />}
-      />
+      {suraList?.length != 0 ? (
+        <FlatList
+          data={suraList}
+          keyExtractor={(item) => `${item.index}`}
+          renderItem={({ item }) => <SuraCard sura={item} />}
+        />
+      ) : (
+        <Loader />
+      )}
     </View>
   );
 };

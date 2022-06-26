@@ -3,12 +3,12 @@ import DiscoverScreen from "../screens/DiscoverScreen";
 import FavoriteScreen from "../screens/FavoriteScreen";
 import HomeScreen from "../screens/HomeScreen";
 import SuraScreen from "../screens/SuraScreen";
-import { Colors } from "../shared/colors";
+import { COLORS } from "../shared/colors";
 
 const Stack = createStackNavigator();
 
 const headerOptions = {
-  headerStyle: { backgroundColor: Colors.mainColor },
+  headerStyle: { backgroundColor: COLORS.mainColor },
   headerTintColor: "white",
 };
 

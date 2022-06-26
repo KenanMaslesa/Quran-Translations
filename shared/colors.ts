@@ -1,4 +1,4 @@
 
-export enum Colors {
-    mainColor = '#262831'
+export const COLORS = {
+    mainColor: '#262831'
 }

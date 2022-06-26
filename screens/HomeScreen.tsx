@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { ImageBackground } from "react-native";
 
 import SuraList from "../components/SuraList";

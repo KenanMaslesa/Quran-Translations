@@ -5,7 +5,7 @@ import {
   FavoriteStackNavigator,
   MainStackNavigator,
 } from "./MainStackNavigator";
-import { Colors } from "../shared/colors";
+import { COLORS } from "../shared/colors";
 
 const Tab = createBottomTabNavigator();
 
@@ -13,7 +13,7 @@ const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={{
-        tabBarStyle: { backgroundColor: Colors.mainColor },
+        tabBarStyle: { backgroundColor: COLORS.mainColor },
         headerShown: false,
       }}
     >

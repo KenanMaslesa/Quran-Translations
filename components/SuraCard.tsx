@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
   },
   suraText: {
     color: "white",
-    fontSize: 16
+    fontSize: 16,
   },
 });

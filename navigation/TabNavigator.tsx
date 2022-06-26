@@ -5,7 +5,6 @@ import {
   FavoriteStackNavigator,
   MainStackNavigator,
 } from "./MainStackNavigator";
-import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ActivityIndicator, FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import { ImageBackground } from "react-native";
 
 import AyahCard from "../components/AyahCard";
@@ -24,16 +24,22 @@ const SuraScreen: React.FC<{ route: any; navigation: any }> = (props) => {
 
   return (
     <View style={styles.container}>
-      <ImageBackground source={require("../assets/background.jpg")} style={styles.backgroundImage}>
-        {ayahs.length != 0? <FlatList
-          style={styles.ayahList}
-          refreshing={true}
-          data={ayahs}
-          keyExtractor={(item) => `${item.index}`}
-          initialNumToRender={7}
-          renderItem={({ item }) => <AyahCard ayah={item} />}
-        />: <Loader/>}
-        
+      <ImageBackground
+        source={require("../assets/background.jpg")}
+        style={styles.backgroundImage}
+      >
+        {ayahs.length != 0 ? (
+          <FlatList
+            style={styles.ayahList}
+            refreshing={true}
+            data={ayahs}
+            keyExtractor={(item) => `${item.index}`}
+            initialNumToRender={7}
+            renderItem={({ item }) => <AyahCard ayah={item} />}
+          />
+        ) : (
+          <Loader />
+        )}
       </ImageBackground>
     </View>
   );
@@ -41,7 +47,7 @@ const SuraScreen: React.FC<{ route: any; navigation: any }> = (props) => {
 
 const styles = StyleSheet.create({
   backgroundImage: {
-    minHeight: '100%'
+    minHeight: "100%",
   },
   container: {
     flex: 1,

@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet } from "react-native";
-import { Translation } from "../models";
 
 interface TranslationCardProps {
   translation: string;
@@ -10,9 +9,7 @@ const TranslationCard: React.FC<TranslationCardProps> = (props) => {
   return (
     <View style={styles.translationCard}>
       <Text style={styles.translationTitle}>{props.title}</Text>
-      <Text style={styles.translationText}>
-        {props.translation}
-      </Text>
+      <Text style={styles.translationText}>{props.translation}</Text>
     </View>
   );
 };

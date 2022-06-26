@@ -47,17 +47,17 @@ const FavoriteStackNavigator = () => {
 };
 
 const DiscoverStackNavigator = () => {
-    return (
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Discover"
-          component={DiscoverScreen}
-          options={{
-            ...headerOptions,
-          }}
-        />
-      </Stack.Navigator>
-    );
-  };
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Discover"
+        component={DiscoverScreen}
+        options={{
+          ...headerOptions,
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export { MainStackNavigator, FavoriteStackNavigator, DiscoverStackNavigator };

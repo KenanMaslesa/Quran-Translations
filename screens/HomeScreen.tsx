@@ -6,7 +6,10 @@ import SuraList from "../components/SuraList";
 const HomeScreen = () => {
   return (
     <View>
-      <ImageBackground source={require("../assets/background.jpg")} style={{minHeight: '100%'}}>
+      <ImageBackground
+        source={require("../assets/background.jpg")}
+        style={{ minHeight: "100%" }}
+      >
         <SuraList />
       </ImageBackground>
     </View>
